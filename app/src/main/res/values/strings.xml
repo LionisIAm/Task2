@@ -4,4 +4,9 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="actionbar_name">Events (All)</string>
+    <string name="menu_news_feed">News Feed</string>
+    <string name="menu_members">Members</string>
+    <string name="menu_messages">Messages</string>
+    <string name="menu_think_tank">Think Tank</string>
+    <string name="menu_evemts">Events</string>
 </resources>

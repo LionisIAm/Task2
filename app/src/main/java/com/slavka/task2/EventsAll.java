@@ -14,9 +14,8 @@ import java.util.ArrayList;
 
 public class EventsAll extends AppCompatActivity  {
 
-    private TextView mTextMessage;
-    private ListView list;
-    ArrayList<Event> event_array = new ArrayList<Event>();
+
+    ArrayList<Event> event_array = new ArrayList<>();
     CustomAdapter adapter;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -25,14 +24,20 @@ public class EventsAll extends AppCompatActivity  {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                case R.id.navigation_news:
+
                     return true;
-                case R.id.navigation_dashboard:
-                    mTextMessage.setText(R.string.title_dashboard);
+                case R.id.navigation_members:
+
                     return true;
-                case R.id.navigation_notifications:
-                    mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_messages:
+
+                    return true;
+                case R.id.navigation_tt:
+
+                    return true;
+                case R.id.navigation_events:
+
                     return true;
             }
             return false;
@@ -47,7 +52,9 @@ public class EventsAll extends AppCompatActivity  {
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
 
-
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.navigation_events);
 
         event_array.add(new Event(R.drawable.im1,"Philadelphia Dinner", "6:00pm – 7:30pm, March 14-15, 2016", "San Jose Conference Center\n" +
                 "Santa Monica Hotel", "San Jose, California","Equity Compensation",null,0,"Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ..."));
@@ -58,14 +65,6 @@ public class EventsAll extends AppCompatActivity  {
         ListView list_events =(ListView) findViewById(R.id.list );
         list_events.setAdapter(adapter);
 
-
-        //list = (ListView) findViewById(R.id.list);
-
-
-
-
-       // BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
 
 
