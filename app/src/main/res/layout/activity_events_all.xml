@@ -18,7 +18,9 @@
             android:id="@+id/list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:divider="#eceef3"
+            android:dividerHeight="4sp"/>
 
     </FrameLayout>
 

@@ -50,9 +50,9 @@ public class EventsAll extends AppCompatActivity  {
 
 
         event_array.add(new Event(R.drawable.im1,"Philadelphia Dinner", "6:00pm – 7:30pm, March 14-15, 2016", "San Jose Conference Center\n" +
-                "Santa Monica Hotel", "San Jose, California"));
+                "Santa Monica Hotel", "San Jose, California","Equity Compensation",null,0,"Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ..."));
         event_array.add(new Event(R.drawable.im2,"CES 2016", "11:00pm – 4:20pm, March 14-15, 2016", "Washington Conference Center\n" +
-                "Santa Monica Hotel","1101 New York Ave, Washington, DC"));
+                "Santa Monica Hotel","1101 New York Ave, Washington, DC",null,"Topic: Digital Advertising",R.drawable.add_img,"Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ..."));
 
         adapter = new CustomAdapter(this,R.layout.event_item,event_array);
         ListView list_events =(ListView) findViewById(R.id.list );
