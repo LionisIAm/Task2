@@ -2,31 +2,29 @@ package com.slavka.task2;
 
 import android.app.Activity;
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewManager;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+
 
 import java.util.ArrayList;
+
+import me.pinxter.letters.Letters;
 
 /**
  * Created by Slavka on 12.07.2017.
  */
 
 public class CustomAdapter extends ArrayAdapter {
-    Context context;
-    int layoutResourceId;
-    RelativeLayout linearMain;
-    ArrayList<Event> data = new ArrayList<Event>();
+    private Context context;
+    private int layoutResourceId;
+    private ArrayList<Event> data = new ArrayList<Event>();
+
 
     public CustomAdapter(Context context, int layoutResourceId,
                               ArrayList<Event> data) {
@@ -34,6 +32,7 @@ public class CustomAdapter extends ArrayAdapter {
         this.layoutResourceId = layoutResourceId;
         this.context = context;
         this.data = data;
+
     }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -79,8 +78,13 @@ public class CustomAdapter extends ArrayAdapter {
             else
                 ((ViewManager)topic.getParent()).removeView(topic);
 
+            TextView text = (TextView) row.findViewById(R.id.text);
+            if (event.event_text!=null)
+                text.setText(event.event_text);
 
 
+            //This is for Letters library, but I`m  sure it doesn`t look good here and also in this app at all =)
+            ((TextView) row.findViewById(R.id.item_users_letter)).setText(EventsAll.letters.getLetter(position));
 
         }
 

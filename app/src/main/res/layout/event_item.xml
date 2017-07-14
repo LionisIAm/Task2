@@ -8,6 +8,11 @@
     android:layout_height="wrap_content"
     android:gravity="center_horizontal">
 
+    <TextView
+        android:id="@+id/item_users_letter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <ImageView
         android:id="@+id/img"
         android:layout_width="match_parent"
@@ -19,8 +24,7 @@
         android:layout_marginRight="15sp"
         android:layout_marginTop="15sp"
         android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/im1" />
+        android:scaleType="centerCrop" />
 
     <TextView
         android:id="@+id/name"
@@ -33,11 +37,9 @@
         android:layout_marginStart="15sp"
         android:layout_marginTop="15sp"
         android:gravity="center"
-        android:text="Philadelphia Dinner"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/datetime"
@@ -47,7 +49,6 @@
         android:layout_alignStart="@+id/name"
         android:layout_below="@+id/name"
         android:layout_marginTop="8sp"
-        android:text="6:00pm – 7:30pm, March 14-15, 2016"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold" />
@@ -60,7 +61,6 @@
         android:layout_alignStart="@+id/datetime"
         android:layout_below="@+id/datetime"
         android:layout_marginTop="15sp"
-        android:text="San Jose Conference Center\nSanta Monica Hotel"
         android:textColor="#FFFFFF"
         android:textSize="15sp" />
 
@@ -81,11 +81,10 @@
         android:layout_alignBottom="@+id/img"
 
         android:layout_marginBottom="15sp"
-        android:layout_marginStart="7sp"
         android:layout_marginLeft="7sp"
+        android:layout_marginStart="7sp"
         android:layout_toEndOf="@+id/imageView"
         android:layout_toRightOf="@+id/imageView"
-        android:text="San Jose, California"
         android:textColor="#FFFFFF"
         android:textSize="13sp" />
 
@@ -121,7 +120,6 @@
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="15sp"
                 android:layout_weight="1"
-                android:text="Equity Compensation"
                 android:textColor="#f82a5a"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -136,7 +134,6 @@
             android:layout_marginLeft="15sp"
             android:layout_marginStart="15sp"
             android:layout_marginTop="15sp"
-            android:text="Topic: Digital Advertising"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -149,8 +146,7 @@
             android:layout_marginRight="15sp"
             android:layout_marginTop="10sp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/add_img" />
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/text"
@@ -159,10 +155,8 @@
             android:layout_marginLeft="15sp"
             android:layout_marginStart="15sp"
             android:layout_marginTop="15sp"
-            android:text="Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ..."
             android:textColor="#000000"
-            android:textSize="17sp"
-            />
+            android:textSize="17sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
